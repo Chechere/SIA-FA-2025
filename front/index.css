@@ -1,0 +1,77 @@
+#pageContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%
+}
+
+button {
+	background-color: #00629B !important;
+}
+
+button:hover {
+	background-color: #005180 !important;
+}
+
+button:active {
+	background-color: #002855 !important;
+}
+
+#imgIEEELogo {
+	margin-bottom: 2vh;
+	width: 50vw;
+}
+
+#userNameContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 5px;
+}
+
+#userNameLabel {
+	font-size: 2em;
+}
+
+#userName {
+	width: 75vw;
+	font-size: 2em;
+	border-width: 3px;
+}
+
+#raceButton {
+	margin-top: 25px;
+	font-size: 2em;
+}
+
+.alert {
+	position: fixed !important;
+	top: -150px; 
+	left: 50%;
+	transform: translateX(-50%);
+	margin-right:10px;
+	transition: top 0.25s ease-in-out;
+	font-size: 2em;
+
+	display: flex !important;
+	justify-content: space-between !important;
+	width: auto !important;
+	white-space: nowrap !important;
+}
+
+.mostrar {
+	top: 10px;
+}
+
+.btn-close {
+	background-color: transparent !important;
+	outline: none !important;
+	box-shadow: none !important;
+	margin-left: 10px;
+}
+
+.btn-close:hover {
+	background-color: transparent !important;
+}
+
