@@ -4,14 +4,52 @@ from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+import qrcode
+
 import os
 from enum import Enum
+from socket import socket, AF_INET, SOCK_STREAM, SOCK_DGRAM, setdefaulttimeout, error
+from urllib.request import urlopen
 
 # uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-print("\nEres desarrollador? Entra aqui:",
-        "\033[1mhttp://0.0.0.0:8000/desarrollador\033[0m\n")
+def get_local_ip():
+    google_dns = "8.8.8.8"
+    port = 80
 
+    try:
+        connection = socket(AF_INET, SOCK_DGRAM)
+        connection.connect((google_dns, port))
+        local_ip_address = connection.getsockname()[0]
+        return local_ip_address
+    except Exception as e:
+        print(e)
+        return None
+    finally:
+        connection.close()
+
+
+local_ip = get_local_ip()
+
+urlBase = "http://" + local_ip + ":8000/"
+
+print("\n URL base de la pagina web: ", 
+        "\033[1m" + urlBase + "\033[0m\n")
+
+qrBase = qrcode.QRCode()
+qrBase.add_data(urlBase)
+qrBase.make()
+qrBase.print_ascii()
+
+urlDesarrollador = urlBase + "/desarrollador"
+
+print("\nEres desarrollador? Entra aqui:",
+        "\033[1m" + urlDesarrollador + "\033[0m\n")
+
+qrDes = qrcode.QRCode()
+qrDes.add_data(urlDesarrollador)
+qrDes.make()
+qrDes.print_ascii()
 
 actualRaceId: int = 12345678
 usersPlaying: list[str] = []
