@@ -1,4 +1,2 @@
-./back/.venv
-./back/__pycache__
-./back/.venv/*
-./back/__pycache__/*
+**/.venv/
+**/__pycache__/
