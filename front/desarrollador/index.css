@@ -1,19 +1,29 @@
-.content {
+.content-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.content-row {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
-	height: 100%;
 }
 
 .vr {
-	margin-left: 5px;
-	margin-right: 5px;
+	margin: 0px 10px;
 }
 
-.contentparticipantes {
-	width: 15vw;
+.form-range {
+	width: 100%;
+}
+
+#content {
+	height: 100vh;
+	margin: 20px;
+}
+
+#leftpanel {
+	width: 15%;
 	height: 100%;
-	margin-left: 10px;
 }
 
 #listaparticipantes {
@@ -26,11 +36,12 @@
 	overflow: hidden;
 }
 
-#herramientascoche div {
-	display: flex;
-	flex-direction: row;
+#rightpanel {
+	flex: 1;
+}
+
+#herramientascoche {
 	width: 100%;
-	height: 100%;
 }
 
 #herramientascoche label {
@@ -38,12 +49,5 @@
 	margin-right: 10px;
 }
 
-.form-range {
-	width: 100%;
-}
-
-
-button {
-	position: absolute;
-	top: 80vh;
+#controlvelocidad {
 }

@@ -1,3 +1,5 @@
+<!doctype html>
+
 <html>
 	<head>
 		<title>Herramientas desarrollador SIA 24/25</title>
@@ -13,41 +15,41 @@
 	</head>
 
 	<body>
-		<div class="content">
-			<div class="contentparticipantes">
+		<div id="content" class="content-row">
+			<div id="leftpanel">
 				<p>Participantes:</p>
 				<ul id="listaparticipantes">
 					<li>Hola<li>
 					<li>AABBCCDDEEFFGGHHIIJJKKLLMMaa<li>
 				</ul>
 			</div>
+
 			<div class="vr"></div>
 
-			<div id="herramientascoche" style="width: 100vw; margin: 10px;">
-				<div class=contentcontrolvelocidad>
-					<label for="controlvelocidad">
-						Máxima Velocidad Coche:
-					</label>
-					<p style="margin-right: 5px;">0%</p>
-					<input type="range" 
-							class="form-range" 
-							id="controlvelocidadmax"
-							onchange="maxspeedchanged(this.value)"/>
-					<p style="margin-left: 5px;">100%</p>
+			<div id="rightpanel" class="content-column">
+				<div id="herramientascoche">
+					<div id=controlvelocidad class="content-row">
+						<label for="controlvelocidadmax">
+							Máxima Velocidad Coche:
+						</label>
+						<p style="margin-right: 5px;">0%</p>
+						<input type="range" 
+								class="form-range" 
+								id="controlvelocidadmax"
+								onchange="maxspeedchanged(this.value)"/>
+						<p style="margin-left: 5px;">100%</p>
+					</div>
+				</div>
+				<div id="acciones" style="flex:1;">
+					<button type="button" class="btn btn-primary btn-lg" id="nuevapartidaboton">
+						Empezar Nueva Partida
+					</button>
+					<button type="button" class="btn btn-primary btn-lg" id="iniciarcarreraboton">
+						Iniciar Carrera
+					</button>
 				</div>
 			</div>
 		</div>
-			<button type="button" class="btn btn-primary btn-lg" id="empezarBoton"
-				onclick="onClickSelectName()">
-				Empezar Nueva Partida
-			</button>
-			<button type="button" class="btn btn-primary btn-lg" id="empezarBoton"
-				onclick="onClickSelectName()">
-				Iniciar Carrera
-			</button>
-			<button type="button" class="btn btn-primary btn-lg" id="empezarBoton"
-				onclick="onClickSelectName()">
-				Generar Codigo QR
-			</button>
+
 	</body>
 </html>
