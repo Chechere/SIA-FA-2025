@@ -11,7 +11,6 @@
 				crossorigin="anonymous">
 
 		<link href="index.css" rel="stylesheet">
-		<script src="index.js"></script>
 	</head>
 
 	<body>
@@ -29,27 +28,32 @@
 			<div id="rightpanel" class="content-column">
 				<div id="herramientascoche">
 					<div id=controlvelocidad class="content-row">
-						<label for="controlvelocidadmax">
-							Máxima Velocidad Coche:
+						<label for="controlvelocidadmax" id="velocidadmaxlabel">
+							Máxima Velocidad Coche (Actual: 50%):
 						</label>
 						<p style="margin-right: 5px;">0%</p>
 						<input type="range" 
 								class="form-range" 
 								id="controlvelocidadmax"
+								value="50"
 								onchange="maxspeedchanged(this.value)"/>
 						<p style="margin-left: 5px;">100%</p>
 					</div>
+					<hr>
 				</div>
-				<div id="acciones" style="flex:1;">
-					<button type="button" class="btn btn-primary btn-lg" id="nuevapartidaboton">
+				<div id="acciones">
+					<button type="button" class="btn btn-primary btn-lg" id="nuevapartidaboton"
+						onclick="nuevaPartida()">
 						Empezar Nueva Partida
 					</button>
-					<button type="button" class="btn btn-primary btn-lg" id="iniciarcarreraboton">
+					<button type="button" class="btn btn-primary btn-lg" id="iniciarcarreraboton"
+						onclick="iniciarCarrera()">
 						Iniciar Carrera
 					</button>
 				</div>
 			</div>
 		</div>
-
 	</body>
+
+	<script src="index.js"></script>
 </html>
