@@ -39,7 +39,8 @@ Instalar el paquete virtualenv, mediante el comando `pip install virtualenv`
 Para crear un entorno virtual, ejecutar el comando `python -m virtualenv <nombre virtualenv>`
 
 Para usarlo ejecutar el comando:
+
 **Linux/Mac**: `source env_name/bin/activate`
-Windows: `.\env_name\Scripts\activate`
+**Windows**: `.\env_name\Scripts\activate`
 
 Para confirmar que esta activado ejecutar el comando `which python3` que deberia devolver la direccion del ejecutable python en el entorno virtual
