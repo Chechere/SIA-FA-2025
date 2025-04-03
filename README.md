@@ -13,12 +13,12 @@ Para ello, un coche con un módulo para seguir lineas de un circuito, realizaria
 ## Requerimientos Previos 📋
 Para el servidor backend se dispone del archivo "requirements.txt" donde se indican todas las librerias usadas.
 Para instalar las librerias, estando en el directorio "back", ejecutar el comando `pip install -r requirements.txt`
-Recomendamos que uses un [entorno virtual](#usar-entorno-virtual) para ello usando la libreria `virtualenv`
+Recomendamos que uses un [entorno virtual](#usar-entorno-virtual-) para ello usando la libreria `virtualenv`
 
 ## Instalación del servidor localmente 🧑‍💻👩‍💻
 1. Clone el repositorio `git clone https://github.com/Chechere/SIA-FA-2025.git`
 2. Muevase a la carpeta "back" dentro del repositorio
-3. [Opcional] instale y use un [entorno virtual](#usar-entorno-virtual) **llamado ".venv"**
+3. [Opcional] instale y use un [entorno virtual](#usar-entorno-virtual-) **llamado ".venv"**
 4. Use el comando `pip install -r requirements.txt` para instalar las dependencias del servidor
 
 ## Uso y Contribución del servidor 🔧
